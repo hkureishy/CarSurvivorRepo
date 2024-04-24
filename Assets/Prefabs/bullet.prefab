@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7174509971188063233}
   Cam1: {fileID: 0}
-  force: 7
+  force: 15
   pierce: 1
   range: 0
   listenToTag: Monster
