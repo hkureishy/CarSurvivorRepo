@@ -23,6 +23,7 @@ public class trainAttributes : MonoBehaviour
     void Start()
     {
          rigidbody2D = GetComponent<Rigidbody2D>();
+         rigidbody2D.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -63,7 +64,22 @@ public class trainAttributes : MonoBehaviour
         levelUp();
         die();
     }
-   
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{ 
+   //     if (other.CompareTag("Fence"))
+    //    {
+    //       rigidbody2D.freeze r = true;
+    //       transform.InverseTransformDirection(rigidbody2D.velocity);
+    //    }
+   // }
+   // private void OnTriggerExit2D(Collider2D other)
+   // { 
+   //     if (other.CompareTag("Fence"))
+   //     {
+   //         rigidbody2D.isKinematic = false;
+    //    }
+   // }
+   //
      public void takeDamage()
     {
        health-=1;

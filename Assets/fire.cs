@@ -12,14 +12,17 @@ public class fire : MonoBehaviour
 	[SerializeField] private float pierce;
 	[SerializeField] private float range;
 	public string listenToTag = "Enemy";
+	private GameObject train;
        
 	void Start()
     {
+		train = GameObject.FindGameObjectWithTag("Player");
 		Cam1 = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		mousePos = Cam1.ScreenToWorldPoint(Input.mousePosition);
 		rb = GetComponent<Rigidbody2D>();
 		Vector3 direction = mousePos - transform.position;
 		rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+		Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), train.GetComponent<Collider2D>());
     }
 
         void Update()

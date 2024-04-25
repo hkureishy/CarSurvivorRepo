@@ -63,12 +63,12 @@
     <Compile Include="Assets\spawn.cs" />
     <Compile Include="Assets\approach.cs" />
     <Compile Include="Assets\Scripts\PlayerCollect.cs" />
+    <Compile Include="Assets\Wall.cs" />
     <Compile Include="Assets\turret.cs" />
     <Compile Include="Assets\Heart.cs" />
     <Compile Include="Assets\fire2.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\fire.cs" />
-    <Compile Include="Assets\fence.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\monsterAttributes.cs" />
     <Compile Include="Assets\SpawnLater.cs" />
@@ -77,6 +77,7 @@
     <Compile Include="Assets\Drive2.cs" />
     <Compile Include="Assets\Rock.cs" />
     <Compile Include="Assets\trainMovement.cs" />
+    <Compile Include="Assets\Fence.cs" />
     <Compile Include="Assets\trainAttributes.cs" />
     <Compile Include="Assets\timer.cs" />
     <Compile Include="Assets\Scripts\Slots_UI.cs" />

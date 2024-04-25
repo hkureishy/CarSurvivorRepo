@@ -15,7 +15,7 @@ public KeyCode listenToKey = KeyCode.F;
 
     void Start()
     {
-        
+        setSpeed(10f);
     }
     void Update()
     {
@@ -26,23 +26,29 @@ public KeyCode listenToKey = KeyCode.F;
     { 
         if (other.CompareTag(listenToTag))
         {
-        train.takeDamage();
-        Destroy(monster);
+            train.takeDamage();
+            Destroy(monster);
         }
         else
         {
-        health = health-1;
-	    if(health<=0) 
-        {
-            dropXP();
-	        Destroy(monster);
+            if (other.CompareTag("Bullet"))
+            {
+                health = health-1;
+	            if(health<=0) 
+                {
+                    dropXP();
+	                Destroy(monster);
      
-        } 
+                } 
+            }
        
         }
     }
     private void dropXP()
     {
         Instantiate(XP, transform.position ,Quaternion.identity);
+    }
+    public void setSpeed(float f){
+        speed = f;
     }
 }
