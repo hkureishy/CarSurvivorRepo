@@ -13,6 +13,7 @@ public class turret : MonoBehaviour
     void Start()
     {
        shotSpeed = train.GetROF();
+      
     }
 
     // Update is called once per frame

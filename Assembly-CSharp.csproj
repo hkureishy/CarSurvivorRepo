@@ -62,16 +62,23 @@
     <Compile Include="Assets\xp.cs" />
     <Compile Include="Assets\spawn.cs" />
     <Compile Include="Assets\approach.cs" />
+    <Compile Include="Assets\ShotSpeed.cs" />
+    <Compile Include="Assets\ItemSpawner.cs" />
     <Compile Include="Assets\SpawnerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerCollect.cs" />
     <Compile Include="Assets\Wall.cs" />
     <Compile Include="Assets\turret.cs" />
     <Compile Include="Assets\Heart.cs" />
     <Compile Include="Assets\fire2.cs" />
+    <Compile Include="Assets\Range.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Pierce.cs" />
     <Compile Include="Assets\fire.cs" />
     <Compile Include="Assets\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Body.cs" />
     <Compile Include="Assets\monsterAttributes.cs" />
+    <Compile Include="Assets\RofBoost.cs" />
+    <Compile Include="Assets\GameOverScript.cs" />
     <Compile Include="Assets\ScoreTracker.cs" />
     <Compile Include="Assets\SpawnLater.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
@@ -85,6 +92,7 @@
     <Compile Include="Assets\Scripts\Slots_UI.cs" />
     <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\CameraNoSpin.cs" />
+    <Compile Include="Assets\Engine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

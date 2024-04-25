@@ -5,6 +5,7 @@ using UnityEngine;
 public class trainAttributes : MonoBehaviour
 {
     [SerializeField] public float health;
+     [SerializeField] public float maxHealth;
     [SerializeField] private float damage;
     [SerializeField] private float shotSpeed;
     [SerializeField] private float pierce;
@@ -22,6 +23,7 @@ public class trainAttributes : MonoBehaviour
     [SerializeField] private float kills;
     [SerializeField] private float timeSurvived = 0f;
     public int level;
+    public bool death;
 
 
     void Start()
@@ -30,6 +32,7 @@ public class trainAttributes : MonoBehaviour
          rigidbody2D.freezeRotation = true;
          kills = 0;
          level = 0;
+         death = false;
     }
 
     // Update is called once per frame
@@ -67,6 +70,10 @@ public class trainAttributes : MonoBehaviour
     }
     void Update()
     {
+        if (health>maxHealth)
+        {
+            health=maxHealth;
+        }
         timeSurvived += Time.deltaTime;
         levelUp();
         die();
@@ -99,13 +106,54 @@ public class trainAttributes : MonoBehaviour
     {
         return pierce;
     }
+    public void addPierce()
+    {
+        pierce+=1;
+    }
      public float getShotSpeed()
     {
         return shotSpeed;
     }
+      public void addShotSpeed()
+    {
+        shotSpeed+=2;
+    }
+     public void addPower()
+    {
+        power+=5;
+        maxspeed+=1;
+    }
+    public float getDamage()
+    {
+        return damage;
+    }
+    public void addDamage()
+    {
+         damage +=5f;
+    }
+      public void addMaxHealth()
+    {
+        maxHealth+=10;
+        health+=5;
+    }
+    public void addRange()
+    {
+        range+=1;
+        
+
+    }
+    public void addROF()
+    {
+        rateOfFire-=.06f;
+        
+    }
     public float getRange()
     {
         return range;
+    }
+    public int getLevel()
+    {
+        return level;
     }
     public void getHP()
     {
@@ -127,6 +175,10 @@ public class trainAttributes : MonoBehaviour
         {
                     return rateOfFire;
         }
+    public bool GetDeath()
+    {
+        return death;
+    }
       void noGas()
     {
         bool gas;
@@ -154,7 +206,7 @@ public class trainAttributes : MonoBehaviour
     public void die(){
          if(health<=0) 
         {
-            
+            death = true;
 	       // Destroy(train);
          gameObject.GetComponent<Renderer>().enabled = false;
         } 

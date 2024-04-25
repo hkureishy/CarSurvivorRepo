@@ -20,5 +20,5 @@ public class Collectable : MonoBehaviour
 
 public enum CollectableType
 {
-    NONE, ENGINE, BATTERY, BODY
+    NONE, ENGINE, BATTERY, BODY, ROFBOOST, PIERCE, RANGE, SHOTSPEED, POWER
 }

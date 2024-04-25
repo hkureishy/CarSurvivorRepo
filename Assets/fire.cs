@@ -9,6 +9,7 @@ public class fire : MonoBehaviour
 	[SerializeField] private Camera Cam1;
 	private Rigidbody2D rb;
 	[SerializeField] private float force=0;
+	[SerializeField] private float damage;
 	[SerializeField] private float pierce;
 	[SerializeField] private float range;
 	public string listenToTag = "Enemy";
@@ -26,6 +27,7 @@ public class fire : MonoBehaviour
 		rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 		Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), train.GetComponent<Collider2D>());
 		timeShot = 0f;
+		damage = train2.getDamage();
     }
 
         void Update()
