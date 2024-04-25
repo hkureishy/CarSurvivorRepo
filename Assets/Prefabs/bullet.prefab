@@ -102,9 +102,9 @@ MonoBehaviour:
   bullet: {fileID: 7174509971188063233}
   Cam1: {fileID: 0}
   force: 15
-  pierce: 1
+  pierce: 0
   range: 0
-  listenToTag: Monster
+  listenToTag: Enemy
 --- !u!61 &4773997638934191454
 BoxCollider2D:
   m_ObjectHideFlags: 0

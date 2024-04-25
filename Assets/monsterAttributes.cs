@@ -35,8 +35,10 @@ public KeyCode listenToKey = KeyCode.F;
             {
                 health = health-1;
 	            if(health<=0) 
+
                 {
                     dropXP();
+                    train.addKills();
 	                Destroy(monster);
      
                 } 

@@ -8,18 +8,26 @@ public class turret : MonoBehaviour
 	[SerializeField] private Camera Cam1;
     [SerializeField] private float shotSpeed;
     [SerializeField] private GameObject bullet;
+    private float timeSinceLastShot=0;
+    [SerializeField] private trainAttributes train;
     void Start()
     {
-         InvokeRepeating("SpawnBullet", 1f, shotSpeed);
+       shotSpeed = train.GetROF();
     }
 
     // Update is called once per frame
      void Update()
     {  
-	mousePos = Cam1.ScreenToWorldPoint(Input.mousePosition);
-	Vector3 rotation = mousePos - transform.position;
-	float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg - 90;
-	transform.rotation = Quaternion.Euler(0,0, rotZ);
+        timeSinceLastShot += Time.deltaTime;
+	    mousePos = Cam1.ScreenToWorldPoint(Input.mousePosition);
+	    Vector3 rotation = mousePos - transform.position;
+	    float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg - 90;
+	    transform.rotation = Quaternion.Euler(0,0, rotZ);
+        if(timeSinceLastShot>shotSpeed)
+        {
+            SpawnBullet();
+            timeSinceLastShot=0;
+        }
     }
 	
 

@@ -11,6 +11,7 @@ public class trainAttributes : MonoBehaviour
     [SerializeField] private float rateOfFire;
     [SerializeField] private float XP;
     [SerializeField] private float XPToNextLevel;
+    [SerializeField] private float range;
     [SerializeField] private trainAttributes train;
     public float power = 3;
     public float maxspeed = 5;
@@ -18,12 +19,17 @@ public class trainAttributes : MonoBehaviour
     public float friction = 3;
     public Vector2 curspeed ;
     Rigidbody2D rigidbody2D;
+    [SerializeField] private float kills;
+    [SerializeField] private float timeSurvived = 0f;
+    public int level;
 
 
     void Start()
     {
          rigidbody2D = GetComponent<Rigidbody2D>();
          rigidbody2D.freezeRotation = true;
+         kills = 0;
+         level = 0;
     }
 
     // Update is called once per frame
@@ -61,6 +67,7 @@ public class trainAttributes : MonoBehaviour
     }
     void Update()
     {
+        timeSurvived += Time.deltaTime;
         levelUp();
         die();
     }
@@ -88,10 +95,38 @@ public class trainAttributes : MonoBehaviour
     {
        XP+=1;
     }
+    public float getPierce()
+    {
+        return pierce;
+    }
+     public float getShotSpeed()
+    {
+        return shotSpeed;
+    }
+    public float getRange()
+    {
+        return range;
+    }
     public void getHP()
     {
        health+=1;
     }
+    public void addKills()
+    {
+        kills+=1;
+    }
+    public float GetKills()
+        {
+            return kills;
+        }
+    public float GetTime()
+        {
+                    return timeSurvived;
+        }
+    public float GetROF()
+        {
+                    return rateOfFire;
+        }
       void noGas()
     {
         bool gas;
@@ -112,7 +147,8 @@ public class trainAttributes : MonoBehaviour
     public void levelUp(){
         if(XP>=XPToNextLevel)
         {
-            XPToNextLevel = XPToNextLevel * 1.3f;
+            XPToNextLevel = XPToNextLevel * 1.8f;
+            level+=1;
         }
     }
     public void die(){
