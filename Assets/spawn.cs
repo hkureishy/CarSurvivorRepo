@@ -29,11 +29,11 @@ public class spawn : MonoBehaviour
 
     private void Spawn()
     {
-        Vector3 spawnDirection = Random.onUnitSphere;
-        spawnDirection.y = 0; // Keep it at the ground level if required
+        var randomDirection = new Vector2(Random.Range(1f,360f), Random.Range(1f,360f)); 
         float spawnDistance = 10f; // How far from the spawner the enemy should appear
+        Vector2 transform2D = transform.position;
 
-        Vector3 spawnPoint = transform.position + spawnDirection.normalized * spawnDistance;
+        Vector2 spawnPoint = transform2D + randomDirection * spawnDistance;
 
         Instantiate(enemy, transform.position, Quaternion.identity);
     }

@@ -10,8 +10,8 @@ public class trainAttributes : MonoBehaviour
     [SerializeField] private float shotSpeed;
     [SerializeField] private float pierce;
     [SerializeField] private float rateOfFire;
-    [SerializeField] private float XP;
-    [SerializeField] private float XPToNextLevel;
+    [SerializeField] public float XP;
+    [SerializeField] public float XPToNextLevel;
     [SerializeField] private float range;
     [SerializeField] private trainAttributes train;
     public float power = 3;
@@ -78,28 +78,13 @@ public class trainAttributes : MonoBehaviour
         levelUp();
         die();
     }
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{ 
-   //     if (other.CompareTag("Fence"))
-    //    {
-    //       rigidbody2D.freeze r = true;
-    //       transform.InverseTransformDirection(rigidbody2D.velocity);
-    //    }
-   // }
-   // private void OnTriggerExit2D(Collider2D other)
-   // { 
-   //     if (other.CompareTag("Fence"))
-   //     {
-   //         rigidbody2D.isKinematic = false;
-    //    }
-   // }
-   //
      public void takeDamage()
     {
        health-=1;
     }
      public void getXP()
     {
+      //switch (float time)
        XP+=1;
     }
     public float getPierce()

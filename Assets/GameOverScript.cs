@@ -10,6 +10,7 @@ public class GameOverScript : MonoBehaviour
     void Start()
     {
         GameOverScreen.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -17,6 +18,7 @@ public class GameOverScript : MonoBehaviour
     {
         if (train.GetDeath())
         {
+            Cursor.visible = true;
             GameOver();
         }
     }

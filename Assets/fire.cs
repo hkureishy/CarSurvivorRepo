@@ -55,7 +55,7 @@ public class fire : MonoBehaviour
 		if (other.CompareTag(listenToTag))
         {
 			pierce -=1;
-			if (pierce<1) 
+			if (pierce<=1) 
 				{
 					Destroy(bullet);
 				} 
