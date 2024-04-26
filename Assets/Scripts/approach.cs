@@ -16,4 +16,12 @@ public class approach : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, train.transform.position, speed * Time.deltaTime);
     }
+    public void Stop()
+    {
+        speed = 0f;
+    }
+    public void setSpeed(float f)
+    {
+        speed = f;
+    }
 }

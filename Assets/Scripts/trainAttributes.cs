@@ -91,6 +91,7 @@ public class trainAttributes : MonoBehaviour
     {
         return pierce;
     }
+
     public void addPierce()
     {
         pierce+=1;
@@ -101,12 +102,16 @@ public class trainAttributes : MonoBehaviour
     }
       public void addShotSpeed()
     {
-        shotSpeed+=2;
+        shotSpeed+=5;
     }
      public void addPower()
     {
-        power+=5;
+        power+=10;
         maxspeed+=1;
+    }
+     public float getPower()
+    {
+        return power;
     }
     public float getDamage()
     {
@@ -119,7 +124,7 @@ public class trainAttributes : MonoBehaviour
       public void addMaxHealth()
     {
         maxHealth+=10;
-        health+=5;
+        health+=10;
     }
     public void addRange()
     {
@@ -129,7 +134,7 @@ public class trainAttributes : MonoBehaviour
     }
     public void addROF()
     {
-        rateOfFire-=.06f;
+        rateOfFire-=.07f;
         
     }
     public float getRange()

@@ -6,7 +6,6 @@ public class Rock : MonoBehaviour
 {
 [SerializeField] private trainAttributes train;
 [SerializeField] private GameObject rock;
-[SerializeField] private float speed = 1.5f;
 [SerializeField] private float health;
 [SerializeField] private float damage;
 [SerializeField] private GameObject XP;

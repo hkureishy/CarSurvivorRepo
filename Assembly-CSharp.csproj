@@ -63,13 +63,12 @@
     <Compile Include="Assets\Scripts\monsterAttributes.cs" />
     <Compile Include="Assets\Scripts\fire.cs" />
     <Compile Include="Assets\Scripts\Crosshair.cs" />
-    <Compile Include="Assets\Scripts\PlayerCollect.cs" />
     <Compile Include="Assets\Scripts\GameOverScript.cs" />
     <Compile Include="Assets\Scripts\ScoreTracker.cs" />
+    <Compile Include="Assets\FastMonster.cs" />
     <Compile Include="Assets\Scripts\Fence.cs" />
     <Compile Include="Assets\Scripts\turret.cs" />
     <Compile Include="Assets\Scripts\CameraNoSpin.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
     <Compile Include="Assets\Scripts\XPMeter.cs" />
     <Compile Include="Assets\Scripts\trainAttributes.cs" />
     <Compile Include="Assets\Scripts\spawn.cs" />
@@ -92,12 +91,12 @@
     <Compile Include="Assets\Scripts\SpawnLater.cs" />
     <Compile Include="Assets\Scripts\fire2.cs" />
     <Compile Include="Assets\Scripts\Wall.cs" />
-    <Compile Include="Assets\Scripts\Slots_UI.cs" />
-    <Compile Include="Assets\Scripts\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\xp.cs" />
+    <Compile Include="Assets\StatDisplay.cs" />
     <Compile Include="Assets\Scripts\Range.cs" />
     <Compile Include="Assets\Scripts\SpawnerMovement.cs" />
     <Compile Include="Assets\Scripts\trainMovement.cs" />
+    <Compile Include="Assets\SlowMonster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
