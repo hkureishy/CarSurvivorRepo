@@ -9,6 +9,8 @@ TagManager:
   - Fence
   - Bullet
   - Wall
+  - XP
+  - HP
   layers:
   - Default
   - TransparentFX

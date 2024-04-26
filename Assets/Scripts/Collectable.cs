@@ -8,12 +8,10 @@ public class Collectable : MonoBehaviour
     public Sprite icon;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerCollect player = collision.GetComponent<PlayerCollect>();
-
-        if(player)
+        if(collision.CompareTag("Player"))
         {
-            player.inventory.Add(this);
-            Destroy(this.gameObject);
+
+                Destroy(this.gameObject);
         }
     }
 }
